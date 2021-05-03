@@ -105,7 +105,11 @@ body {
   font-weight: var(--sub-title-font-weight);
   font-size: 14px;
   letter-spacing: 0.02em;
+<<<<<<< HEAD
   /* анимация кнопок nav */
+=======
+
+>>>>>>> 379106be08571800373f07923d8ce677723157ca
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
