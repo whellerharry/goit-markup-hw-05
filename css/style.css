@@ -105,7 +105,7 @@ body {
   font-weight: var(--sub-title-font-weight);
   font-size: 14px;
   letter-spacing: 0.02em;
-
+  /* анимация кнопок nav */
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -161,6 +161,11 @@ body {
   font-weight: var(--sub-title-font-weight);
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  /* анимация кнопок nav */
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .site-auth .link:hover,
 .site-auth .link:focus {
