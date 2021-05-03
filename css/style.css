@@ -115,6 +115,22 @@ body {
 .site-nav .link.current {
   color: var(--accent-color);
 }
+/* подчеркивание текущей страницы */
+.current {
+  position: relative;
+}
+.current::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  position: absolute;
+  bottom: -8px;
+}
+
 
 /* site-auth list*/
 .site-auth {
