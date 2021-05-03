@@ -105,11 +105,7 @@ body {
   font-weight: var(--sub-title-font-weight);
   font-size: 14px;
   letter-spacing: 0.02em;
-<<<<<<< HEAD
   /* анимация кнопок nav */
-=======
-
->>>>>>> 379106be08571800373f07923d8ce677723157ca
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -387,6 +383,11 @@ body {
   border-radius: 50%;
   background-color: var(--primary-bg-color);
   color: var(--social-icon-color);
+  /* анимация иконок соцсетей в нашакоманда */
+  transition-property: background-color, fill;
+  transition-duration: 5000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .social-icon-link:hover,
 .social-icon-link:focus {
@@ -418,6 +419,11 @@ body {
   border: 1px solid var(--social-icon-color);
   border-radius: 4px;
   color: var(--social-icon-color);
+  /* анимация иконок клиенты */
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -470,6 +476,11 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
+  /* анимация footer-auth */
+  transition-property: color;
+  transition-duration: 3000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .footer-auth.footer .link:hover,
 .footer-auth.footer .link:focus,
