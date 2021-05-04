@@ -224,7 +224,70 @@ body {
   height: 50px;
   cursor: pointer;
 }
-
+/* Модальное окно */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden.modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition-duration: 5000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  background-color: var(--primary-bg-color);
+}
+.modal-text {
+  transition-duration: 5000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  margin-top: 200px;
+  margin-bottom: auto;
+  font-family: var(--primary-font-family);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.56;
+  color: rgb(255, 0, 0);
+}
+.hero-button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-bg-color);
+}
+.close-x {
+  width: 18px;
+  height: 18px;
+  fill: #000000;
+  background-color: var(--primary-bg-color);
+}
 /* Преимущества advantages section */
 .hide {
   position: absolute;
@@ -384,7 +447,7 @@ body {
   background-color: var(--primary-bg-color);
   color: var(--social-icon-color);
   /* анимация иконок соцсетей в нашакоманда */
-  transition-property: background-color, fill;
+  transition-property: background-color;
   transition-duration: 5000ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
@@ -513,6 +576,7 @@ body {
 .social-icon-link.joining:focus {
   background-color: var(--accent-color);
 }
+/*---------- portfolio page--------- */
 
 /* portfolio buttons */
 .button-list {
@@ -561,10 +625,45 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
 }
-.card-link:hover,
-.card-link:focus {
+.card-link:hover .thumb-text,
+.card-link.k:focus .thumb-text {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transform: translateY(0);
 }
+
+.card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.thumb-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  display: flex;
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.thumb-desc {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: var(--primary-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.56;
+  color: var(--white-text-color);
+}
+.card-thumb:hover .thumb-text {
+  transform: translateY(0);
+}
+
 .card-item {
   margin-left: 15px;
   margin-top: 15px;
