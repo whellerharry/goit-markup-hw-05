@@ -56,7 +56,7 @@
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
           <button • data-modal-open type="button" class="hero-button">Заказать услугу</button>
-          <div class="backdrop is-hidden" data-modal>
+          <!-- <div class="backdrop is-hidden" data-modal>
             <div class="modal">
               <p class="modal-text">При зависании компьютера выдернуть шнур, выдавить стекло</p>
               <button • data-modal-close class="hero-button-close">
@@ -65,7 +65,7 @@
                 </svg>
               </button>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
       <!-- Преимущества advantages section-->
@@ -489,6 +489,16 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <p class="modal-text">При зависании компьютера выдернуть шнур, выдавить стекло</p>
+        <button • data-modal-close class="hero-button-close">
+          <svg class="close-x">
+            <use href="./images/icons/sprite.svg#close-x"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
