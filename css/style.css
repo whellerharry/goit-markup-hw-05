@@ -245,7 +245,7 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-.backdrop.is-hidden.modal {
+.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
 }
 .modal {
@@ -255,10 +255,11 @@ body {
   max-height: 100%;
   top: 50%;
   left: 50%;
+  /* display: flex;
+  justify-content: flex-end; */
   transform: translate(-50%, -50%) scale(1);
   border-radius: 4px;
   background-color: var(--primary-bg-color);
-  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-text {
@@ -458,14 +459,19 @@ body {
 .social-icon-link:focus {
   background-color: var(--accent-color);
 }
-.social-icon-link:hover .social-icons-svg,
-.social-icon-link:focus .social-icons-svg {
-  fill: var(--primary-bg-color);
-}
+
 .social-icons-svg {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
   width: 20px;
   height: 20px;
   fill: currentColor;
+}
+.social-icon-link:hover .social-icons-svg,
+.social-icon-link:focus .social-icons-svg {
+  fill: var(--primary-bg-color);
 }
 
 /* Постоянные клиенты clients section */
